@@ -1,0 +1,322 @@
+:root{
+  --main-color: #0056b3;
+  --bg-color:rgba(83, 83, 83, 0.33);
+  --border-color: rgba(27, 27, 27, 0.33);
+  --font-color:rgba(248, 243, 243, 0.9);
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .navbar {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+  }
+  .navbar h1 {
+    margin: 0;
+  }
+
+  .tabs {
+    display: flex;
+    /* justify-content: space-around; */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f0f0f0;
+    border: solid 1px silver;
+    box-shadow:  1opx 10px 10px 20px white;
+  }
+  .tabs li {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+  }
+  .tabs li.active {
+    background-color: #fff;
+    border-bottom: none;
+  }
+  .tabs li a {
+   text-decoration: none;
+   color: black;
+   font-weight: 550;
+ 
+  }
+  .tabs li a:hover {
+   color: #2280e6;
+  }
+  .forms {
+    /* display: none; */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+    background-color: #fff;
+    margin: 4% auto;
+    width: 1000px;
+  }
+  .forms.active {
+    display: block;
+  }
+  
+  .btn-group{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+ 
+  button:hover {
+    background-color: #f0f4f8;
+    color: #0056b3;
+  }
+  .form-container{
+    display: flex;
+    padding: 1rem;
+  }
+  /* .input-group{
+    flex: 1;
+  } */
+  .errors{
+    background-color: rgb(231, 175, 175);
+    color: rgb(117, 1, 1);
+    border: solid 1px rgb(117, 1, 1);
+    padding: .5rem;
+  }
+ 
+  /* .box_btn{
+    display: inline;
+    margin: auto !important;
+    max-width: 100px !important;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  } */
+
+  /* .btn-group{
+    display: flex !important;
+    justify-content: left !important;
+  } */
+  .btn_saved{
+    max-width: 300px !important;
+    border-radius: 0px;
+    background-color: #0056b3; 
+  } 
+  .btn-print{
+    max-width: 300px !important;
+    border-radius: 0px !important;
+    background-color: #0056b3; 
+  } 
+  .btn-print:hover{
+    max-width: 300px !important;
+    border-radius: 0px;
+    background-color: white !important; 
+    color: #0056b3 !important; 
+  } 
+  .btn_canceled{
+    display: block;
+    background:#a01402 !important;
+    color:white;
+    text-decoration: none;
+    padding: 0rem 2rem;
+    margin: 0px !important;
+    /* border-radius: 5px; */
+  } 
+  .btn_print{
+    display: block;
+    background:#007bff !important;
+    color:white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: auto !important;
+    max-width: 100px !important;
+  }
+  .btn_history{
+    display: block;
+    background:#a01402 !important;
+    color:white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: auto !important;
+    max-width: 100px !important;
+  }
+
+
+  @media screen and (max-width:900px) {
+      .forms {
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 0 0 5px 5px;
+          background-color: #fff;
+          max-width: 90%;
+          margin: 1% auto;
+      }
+      .btn-group{
+        display: flex;
+        flex-direction: column;
+      }
+  }
+  @media screen and (max-width:768px) {
+      .forms {
+          padding: 20px;
+          border: 1px solid #ccc;
+          border-radius: 0 0 5px 5px;
+          background-color: #fff;
+          max-width: 90%;
+          margin: 2% auto;
+      }
+  }
+
+  /* ============ Home menu ===================== */
+
+  .menu_home{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .box_home{
+    width: 29%;
+    margin: 1%;
+    border: solid 1px blue;
+    min-height: 150px;
+    padding: 5px;
+  }
+  .box_home a{
+    text-decoration: none;
+  }
+   /* ============== box users ================ */
+  .box_home ul.users_home{
+    background-color: #f38e0a;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+ 
+  .users_home li{
+   
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-bottom: dotted 1px silver;
+  }
+  .number_users h3,
+  .img_users i
+  {
+    padding: 0;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .img_users i{
+    font-size: 60px;
+    padding-top: 20px;
+    /* padding: 0 6px; */
+    height: 100px;
+  }
+  /* ============== box month ================ */
+  .box_home ul.month_home{
+    background-color: #359b06c5;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+  .month_home li{
+   
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-bottom: dotted 1px silver;
+  }
+  .number_month h3,
+  .img_month i
+  {
+    padding: 0;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .img_month i{
+    font-size: 60px;
+    padding-top: 20px;
+    /* padding: 0 6px; */
+    height: 100px;
+  }
+  /* ============== box year ================ */
+  .box_home ul.year_home{
+    background-color: #f01cbbc5;
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+  .year_home li{
+   
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border-bottom: dotted 1px silver;
+  }
+  .number_year h3,
+  .img_year i
+  {
+    padding: 0;
+    margin: 0 auto;
+    color: white;
+  }
+  
+  .img_year i{
+    font-size: 60px;
+    padding-top: 20px;
+    /* padding: 0 6px; */
+    height: 100px;
+  }
+  /* =============== last box ========================== */
+  .last_box{
+    width: 98% !important;
+    height: 50px !important;
+    border: solid 1px blue;
+    padding: 5px;
+  }
+  .last_box_home{
+    background-color: rgba(38, 98, 228, 0.1);
+    height: 100%;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+  }
+
+  /* ============= form month ================= */
+
+  .form{
+    border: solid 1px var(--main-color) !important;
+  }
+  /* ============= table style =============== */
+
+  /* table tr, th, td{
+    border-collapse: collapse;
+    padding: 1rem;
+
+  } */
+  .content-table{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 850px;
+    width: 100%;
+    padding: 1rem;
+
+  }
+/* ========= form container ============= */
+
+#form-search{
+  display: flex;
+  background-color: red;
+}
